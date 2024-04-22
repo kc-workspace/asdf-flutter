@@ -54,10 +54,10 @@ sys_arch_yaml:
     ppc64le: ''
     x86: ''
     x86_64: ''
-sys_ext_default: zip
+sys_ext_default: .zip
 sys_ext_enabled: true
 sys_ext_yaml:
-    linux-*: tar.xz
+    linux-*: .tar.xz
 sys_os_enabled: true
 sys_os_yaml:
     darwin: macos
