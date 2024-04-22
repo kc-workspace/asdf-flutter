@@ -25,14 +25,14 @@ app_website: https://flutter.dev
 archive_conf_path: flutter
 archive_conf_strip: 0
 archive_enabled: true
-archive_regex: (\\.zip)$
+archive_regex: (\\.tar\\.xz|\\.zip)$
 checksum_conf_algorithm: 256
 checksum_enabled: true
 checksum_url: https://storage.googleapis.com/flutter_infra_release/releases/releases_{os}.json
 custom_bin_paths: bin
 custom_non_stable_version: (-dev|-latest|[-\.]rc|-alpha|-beta|[-\.]pre|-next|snapshot|master)
 custom_require_commands: jq
-download_url: https://storage.googleapis.com/flutter_infra_release/releases/{channel}/{os}/flutter_{os}{arch}_{version}-{channel}.zip
+download_url: https://storage.googleapis.com/flutter_infra_release/releases/{channel}/{os}/flutter_{os}{arch}_{version}-{channel}{ext}
 gpg_enabled: false
 install_map_enabled: false
 package_enabled: false
@@ -54,7 +54,10 @@ sys_arch_yaml:
     ppc64le: ''
     x86: ''
     x86_64: ''
-sys_ext_enabled: false
+sys_ext_default: zip
+sys_ext_enabled: true
+sys_ext_yaml:
+    linux-*: tar.xz
 sys_os_enabled: true
 sys_os_yaml:
     darwin: macos

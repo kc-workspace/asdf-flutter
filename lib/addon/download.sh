@@ -12,7 +12,7 @@ kc_asdf_download_mode() {
     mode="custom"
   elif echo "$filename" | grep -qiE "\.git$"; then
     mode="git"
-  elif echo "$filename" | grep -qiE "(\\.zip)$"; then
+  elif echo "$filename" | grep -qiE "(\\.tar\\.xz|\\.zip)$"; then
     mode="archive"
   fi
 

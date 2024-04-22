@@ -58,7 +58,7 @@ __asdf_bin() {
     kc_asdf_error "$ns" "reference mode is not support by current plugin"
     return 1
   elif kc_asdf_is_ver; then
-    url="https://storage.googleapis.com/flutter_infra_release/releases/{channel}/{os}/flutter_{os}{arch}_{version}-{channel}.zip"
+    url="https://storage.googleapis.com/flutter_infra_release/releases/{channel}/{os}/flutter_{os}{arch}_{version}-{channel}{ext}"
     url="$(kc_asdf_template "$url" "${vars[@]}")"
     command -v _kc_asdf_custom_download_url >/dev/null &&
       kc_asdf_debug "$ns" "developer custom download link" &&

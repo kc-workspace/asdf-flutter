@@ -107,7 +107,35 @@ kc_asdf_get_arch() {
   printf "%s" "$arch"
 }
 
+kc_asdf_get_ext() {
+  local ns="arch.addon"
+  local ext="${ASDF_OVERRIDE_EXT:-}"
+  if [ -n "$ext" ]; then
+    kc_asdf_warn "$ns" "user overriding download extension to '%s'" "$ext"
+    printf "%s" "$ext"
+    return 0
+  fi
+
+  local key="$KC_ASDF_OS-$KC_ASDF_ARCH"
+  ext="zip"
+  case "$key" in
+  linux-*)
+    ext="tar.xz"
+    ;;
+  esac
+
+  if command -v _kc_asdf_custom_ext >/dev/null; then
+    local tmp="$ext"
+    ext="$(_kc_asdf_custom_ext "$tmp")"
+    kc_asdf_debug "$ns" "developer has custom DOWNLOAD_EXT from %s to %s" "$tmp" "$ext"
+  fi
+
+  printf "%s" "$ext"
+}
+
 ## System information
 KC_ASDF_OS="$(kc_asdf_get_os)"
 KC_ASDF_ARCH="$(kc_asdf_get_arch)"
 export KC_ASDF_OS KC_ASDF_ARCH
+KC_ASDF_EXT="$(kc_asdf_get_ext)"
+export KC_ASDF_EXT
