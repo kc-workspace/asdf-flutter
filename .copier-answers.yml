@@ -1,0 +1,64 @@
+---
+## Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v2.5.1-8-ga0b8e89
+_src_path: /Users/kamontat/Desktop/Personal/asdf-plugin-template
+addon_yaml:
+    archive: true
+    checksum: true
+    download: true
+    fetch: true
+    git: false
+    github: true
+    gpg: false
+    help: true
+    install: true
+    package: false
+    python: false
+    system: true
+    tags: true
+    version: false
+app_desc: easy and fast to build beautiful apps for mobile and beyond
+app_name: flutter
+app_repo: https://github.com/flutter/flutter
+app_type: standalone
+app_website: https://flutter.dev
+archive_conf_path: flutter
+archive_conf_strip: 0
+archive_enabled: true
+archive_regex: (\\.zip)$
+checksum_conf_algorithm: 256
+checksum_enabled: true
+checksum_url: https://storage.googleapis.com/flutter_infra_release/releases/releases_{os}.json
+custom_bin_paths: bin
+custom_non_stable_version: (-dev|-latest|[-\.]rc|-alpha|-beta|[-\.]pre|-next|snapshot|master)
+custom_require_commands: jq
+download_url: https://storage.googleapis.com/flutter_infra_release/releases/{channel}/{os}/flutter_{os}{arch}_{version}-{channel}.zip
+gpg_enabled: false
+install_map_enabled: false
+package_enabled: false
+plugin_author: Kamontat Chantrachirathumrong
+plugin_name: asdf-flutter
+plugin_org: kc-workspace
+plugin_repo: https://github.com/kc-workspace/asdf-flutter.git
+source_enabled: false
+sys_arch_enabled: true
+sys_arch_yaml:
+    aarch64*: _arm64
+    arm64*: _arm64
+    armv5*: _arm64
+    armv6*: _arm64
+    armv7*: _arm64
+    i386: ''
+    i686: ''
+    powerpc64le: ''
+    ppc64le: ''
+    x86: ''
+    x86_64: ''
+sys_ext_enabled: false
+sys_os_enabled: true
+sys_os_yaml:
+    darwin: macos
+    linux: linux
+test_cmd_args: --version
+version_file_enabled: false
+version_prefix: ''
