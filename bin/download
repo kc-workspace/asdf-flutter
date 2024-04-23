@@ -22,7 +22,7 @@ _kc_asdf_custom_checksum() {
   ## checksum_tmp is a raw checksum file from url
   local checksum_tmp="$3"
 
-  local query=".releases.[] | select(.archive | contains(\"$filename\")) | .sha256"
+  local query=".releases[] | select(.archive | contains(\"$filename\")) | .sha256"
   "$create" "$filename" "$(jq --raw-output "$query" "$checksum_tmp")"
 }
 
