@@ -25,7 +25,7 @@ kc_asdf_archive_extract() {
     fi
     args+=(-f "$input" -C "$tmppath")
     kc_asdf_exec tar -x \
-    "${args[@]}" ||
+      "${args[@]}" ||
       return 1
   fi
 
