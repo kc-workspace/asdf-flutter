@@ -18,9 +18,8 @@ kc_asdf_archive_extract() {
       return 1
   else
     kc_asdf_exec tar -xzf \
-      "$input" \
       -C "$tmppath" \
-      --strip-components "0" ||
+      "$input" ||
       return 1
   fi
 

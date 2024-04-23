@@ -1,6 +1,6 @@
 ---
 ## Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: v2.5.1-10-g5577194
+_commit: v2.5.1-11-gcdc2525
 _src_path: /Users/kamontat/Desktop/Personal/asdf-plugin-template
 addon_yaml:
     archive: true
@@ -23,7 +23,7 @@ app_repo: https://github.com/flutter/flutter
 app_type: standalone
 app_website: https://flutter.dev
 archive_conf_path: flutter
-archive_conf_strip: 0
+archive_conf_strip: -1
 archive_enabled: true
 archive_regex: (\\.tar\\.xz|\\.zip)$
 checksum_conf_algorithm: 256
@@ -44,6 +44,7 @@ source_enabled: false
 sys_arch_enabled: true
 sys_arch_yaml:
     aarch64*: _arm64
+    amd64: ''
     arm64*: _arm64
     armv5*: _arm64
     armv6*: _arm64

@@ -66,6 +66,9 @@ kc_asdf_get_arch() {
   aarch64*)
     arch="_arm64"
     ;;
+  amd64)
+    arch=""
+    ;;
   arm64*)
     arch="_arm64"
     ;;
