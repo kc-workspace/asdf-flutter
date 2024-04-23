@@ -57,11 +57,9 @@ kc_asdf_get_arch() {
   local arch="${ASDF_OVERRIDE_ARCH:-}"
   if [ -n "$arch" ]; then
     kc_asdf_warn "$ns" "user overriding arch to '%s'" "$arch"
-    printf "%s" "$arch"
-    return 0
+  else
+    arch="$(uname -m)"
   fi
-
-  arch="$(uname -m)"
   case "$arch" in
   aarch64*)
     arch="_arm64"

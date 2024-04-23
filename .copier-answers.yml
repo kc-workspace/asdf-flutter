@@ -1,6 +1,6 @@
 ---
 ## Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: v2.5.1-11-gcdc2525
+_commit: v2.5.1-13-g331df5c
 _src_path: /Users/kamontat/Desktop/Personal/asdf-plugin-template
 addon_yaml:
     archive: true

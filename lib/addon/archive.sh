@@ -17,9 +17,9 @@ kc_asdf_archive_extract() {
     kc_asdf_exec unzip -qo "$input" -d "$tmppath" ||
       return 1
   else
-    kc_asdf_exec tar -xzf \
+    kc_asdf_exec tar -xz \
       -C "$tmppath" \
-      "$input" ||
+      -f "$input" ||
       return 1
   fi
 
