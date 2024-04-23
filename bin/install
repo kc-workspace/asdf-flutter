@@ -13,6 +13,13 @@
 #   return 0
 # }
 
+_kc_asdf_custom_post_install() {
+  local download_dir="$1"
+  if [ -d "$download_dir" ]; then
+    rm -rf "$download_dir"
+  fi
+}
+
 ## -----------------------
 
 set -euo pipefail
