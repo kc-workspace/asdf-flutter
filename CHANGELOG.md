@@ -3,7 +3,7 @@
 ## 1.0.0 (2024-09-29)
 
 
-### Bug Fixes
+### Bugfixes
 
 * update cspell dict ([54f6e1e](https://github.com/kc-workspace/asdf-flutter/commit/54f6e1e776aae60832617525f504d42c68fe916b))
 
