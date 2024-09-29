@@ -59,8 +59,8 @@ __asdf_bin() {
     fi
   done
 
-  command -v _kc_asdf_custom_post_install >/dev/null &&
-    kc_asdf_debug "$ns" "developer has post install source function defined" &&
+  if command -v _kc_asdf_custom_post_install >/dev/null; then
+    kc_asdf_debug "$ns" "developer has post install source function defined"
     _kc_asdf_custom_post_install "$indir" "$outdir"
-
+  fi
 }
